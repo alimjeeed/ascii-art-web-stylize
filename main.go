@@ -7,6 +7,11 @@ import (
 )
 
 func main() {
+	//Here is the extra changes we added to deal with changing our css from intrenal to external
+	fs:=http.FileServer(http.Dir("./static"))
+	http.Handle("/static/",http.StripPrefix("/static/", fs))
+	//////////////////////////////////////////////////////////////
+	
 	// Set up routes and their handlers.
 	http.HandleFunc("/", web.HomeHandler)
 	http.HandleFunc("/ascii-art", web.AsciiArtHandler)
