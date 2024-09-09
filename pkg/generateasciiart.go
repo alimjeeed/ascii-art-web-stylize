@@ -1,9 +1,11 @@
 package asciiart
 
 const (
-	asciiArtHeight    = 8
-	asciiOffset       = 32
-	linesPerCharacter = 9
+	asciiArtHeight      = 8
+	asciiOffset         = 32
+	linesPerCharacter   = 9
+	asciiNewline        = 10
+	asciiCarriageReturn = 13
 )
 
 func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
@@ -20,8 +22,8 @@ func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 			continue
 		}
 
-		// If the current and next character form "\n", insert a new line.
-		if i < len(asciiValues)-1 && asciiValues[i] == '\\' && asciiValues[i+1] == 'n' {
+		// If the current character form a new line, insert a new line.
+		if i < len(asciiValues)-1 && asciiValues[i] == asciiNewline || asciiValues[i] == asciiCarriageReturn {
 			// Add the ASCII art created so far, followed by a newline character.
 			output += GetAsciiArt(outputLines) + "\n"
 
@@ -41,8 +43,8 @@ func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 			outputLines[j] += asciiArtLines[startIndex+j]
 		}
 
-		// Check if the last two characters in the input string form a newline.
-		if len(asciiValues) > 1 && asciiValues[len(asciiValues)-1] == 'n' && asciiValues[len(asciiValues)-2] == '\\' {
+		// Check if the last character in the input string form a newline.
+		if len(asciiValues) > 1 && asciiValues[len(asciiValues)-1] == asciiNewline || asciiValues[len(asciiValues)-1] == asciiCarriageReturn {
 			lastCharIsNewLine = true
 		}
 

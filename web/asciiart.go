@@ -7,10 +7,12 @@ import (
 )
 
 const (
-	defaultBanner   = "standard"
-	fileExtension   = ".txt"
-	unixSplitter    = "\n"
-	windowsSplitter = "\r\n"
+	defaultBanner       = "standard"
+	fileExtension       = ".txt"
+	unixSplitter        = "\n"
+	windowsSplitter     = "\r\n"
+	asciiNewline        = 10
+	asciiCarriageReturn = 13
 )
 
 // Define the data structure to be passed to the HTML template.
@@ -44,7 +46,7 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 
 		// Ensure that the input string contains only ASCII characters.
 		for _, v := range inputString {
-			if !(v >= 32 && v <= 126) {
+			if !(v >= 32 && v <= 126) && v != asciiNewline && v != asciiCarriageReturn {
 				// Send a 400 Bad Request response to the client.
 				http.Error(w, "Bad Request: Input must contain only printable ASCII characters. Please provide a valid input.", http.StatusBadRequest)
 				return
