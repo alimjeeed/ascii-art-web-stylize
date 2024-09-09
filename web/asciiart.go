@@ -74,11 +74,10 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 		// Execute the template, passing in the data to be displayed.
 		tmpl.Execute(w, data)
 
-	//Here is the additon I added in order to redirect away from the blank page	
+		// Added redirection to the home page for GET requests to prevent displaying a blank page.
 	} else if r.Method == http.MethodGet {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 	} else {
 		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
 	}
-	////////////////////////////////////////////////////////////////////////////
 }
