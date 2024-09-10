@@ -7,25 +7,35 @@
 </head>
 <body>
 
-<h1>ASCII ART WEB</h1>
+<div class="titleContainer">    
+    <p id="title1">ASCII ART</p>
+    <p id="title2">GENERATOR</p>
+</div>
+
 
 <div class="container">
     <div class="form">
         <form action="/ascii-art" method="POST">
-            <label for="inputString">Enter your text:</label><br><br>
-            <textarea id="inputString" name="inputString" required></textarea><br><br>
-            <small>Use \n as a newline tag.</small><br><br>
+            <textarea id="inputString" name="inputString" placeholder="Enter your text here." required></textarea><br><br>
 
-            <input type="radio" id="standard" name="banner" value="standard" checked>
-            <label for="standard">Standard</label><br>
+            <div class="buttonsContainer">
 
-            <input type="radio" id="shadow" name="banner" value="shadow">
-            <label for="shadow">Shadow</label><br>
+                <span class="buttons">
+                    <input type="radio" id="standard" name="banner" value="standard" checked>
+                    <label for="standard">STANDARD</label><br>
+                </span>
+                <span class="buttons">
+                    <input type="radio" id="shadow" name="banner" value="shadow">
+                    <label for="shadow">SHADOW</label><br>
+                </span>
+                <span class="buttons">
+                    <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                    <label for="thinkertoy">THINKERTOY</label><br>
+                </span>
 
-            <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
-            <label for="thinkertoy">Thinkertoy</label><br><br>
+            </div>
 
-            <input type="submit" id="submitButton" value="Generate ASCII art">
+            <input type="submit" id="submitButton" value="GENERATE">
         </form>
     </div>
     <div id="output">
