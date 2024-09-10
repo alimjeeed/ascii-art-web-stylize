@@ -97,13 +97,13 @@ textarea, textarea::placeholder {
 
 .buttons label:hover {
     color: white;
-    background-color: green;
+    background-color: #5B8B32;
     border-bottom: solid 1px #bbb;
 }
 
 .buttons label.selected {
     color: white;
-    background-color: green;
+    background-color: #5B8B32;
     border-bottom: solid 1px #bbb;
 }
 
@@ -128,7 +128,7 @@ textarea, textarea::placeholder {
 /* Submit Button Hover */
 #submitButton:hover {
     color: white;
-    background-color: green;
+    background-color: #5B8B32;
     border-bottom: solid 1px #bbb;
     transition: 0.1s;
 }
