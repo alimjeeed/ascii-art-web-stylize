@@ -3,6 +3,41 @@
 <head>
     <title>ASCII Art Web</title>
     <link rel="stylesheet" href="/static/style.css">
+
+    <script>
+        let lastSelectedId = "standard"; // To store the last clicked button
+
+        // Automatically select the first button on page load
+        window.onload = function() {
+            document.getElementById("standard").checked = true;
+            selectBanner("standard");
+        };
+
+        function selectBanner(selectedId) {
+            // Remove the selected class from all labels
+            const labels = document.querySelectorAll('.buttons label');
+            labels.forEach(label => {
+                label.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked label
+            const selectedLabel = document.querySelector(`label[for=${selectedId}]`);
+            selectedLabel.classList.add('selected');
+
+            // Update the last selected id
+            lastSelectedId = selectedId;
+        }
+
+        // Add event listeners to all the radio buttons and labels
+        document.addEventListener("DOMContentLoaded", function () {
+            const radios = document.querySelectorAll(".buttons input[type='radio']");
+            radios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    selectBanner(radio.id);
+                });
+            });
+        });
+    </script>
  
 </head>
 <body>
@@ -37,14 +72,14 @@
 
             <input type="submit" id="submitButton" value="GENERATE">
         </form>
-    </div>
-    <div id="output">
-        <!-- Conditional block: This section only appears if the .InputString field is set in the template data. -->
-        {{if .Output}}
-            <code>{{.Output}}</code>
-        {{else}}
-            <p>Your ASCII art will appear here. Enter some text above and hit "Generate ASCII art" to see it!</p>
-        {{end}}
+        <div id="output">
+            <!-- Conditional block: This section only appears if the .InputString field is set in the template data. -->
+            {{if .Output}}
+                <code>{{.Output}}</code>
+            {{else}}
+                <p>Your ASCII art will appear here. Enter some text above, choose a banner and hit "Generate" to see it!</p>
+            {{end}}
+        </div>
     </div>
 </div>
 </body>
