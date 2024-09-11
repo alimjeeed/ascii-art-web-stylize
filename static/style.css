@@ -24,7 +24,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7.5%;
+    margin-top: 7%;
     margin-bottom: 0;
     color: rgb(40, 40, 40);
 }
@@ -135,7 +135,7 @@ textarea, textarea::placeholder {
 
 /* Title Styles */
 #title1, #title2 {
-    font-size: 15vw; /* Adjust font size based on viewport width */
+    font-size: 14vw; /* Adjust font size based on viewport width */
     letter-spacing: 1vw; /* Spacing between letters */
     margin: 0;
     text-align: center;
@@ -183,7 +183,7 @@ code {
     }
 
     #title1, #title2 {
-        font-size: 21vw; /* Adjust font size based on viewport width */
+        font-size: 20vw; /* Adjust font size based on viewport width */
     }
 
     textarea, textarea::placeholder {
