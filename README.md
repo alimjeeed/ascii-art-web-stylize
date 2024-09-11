@@ -1,12 +1,20 @@
-# ascii-art-web
+# ascii-art-web-stylize
 
-**ascii-art-web** is a Go-based web application that transforms text into stylized ASCII art using predefined character banners. It builds on the original **ascii-art** project by incorporating a web server for easier interaction through a web browser.
+**ascii-art-web-stylize** is a Go-based web application that transforms text into stylized ASCII art, building on the original **ascii-art-web** project. In this version, we focus on enhancing the user interface to be more appealing, interactive, and user-friendly by adopting a Minecraft-inspired design.
+
+## Key Enhancements
+
+1. **Appealing and Intuitive Design**: 
+   - The web interface is revamped with a Minecraft-inspired theme to create a fun and engaging experience for users.
+   
+2. **Improved User Interaction**: 
+   - Interactive buttons allow users to easily select between ASCII banner styles like *Standard*, *Shadow*, and *Thinkertoy*.   
 
 ## Authors
 
-- **Ali** - [@amajeed](https://learn.reboot01.com/git/amajeed)
-- **Based** - [@bajaafar](https://learn.reboot01.com/git/bajaafar)
-- **Osama** - [@oalmaska](https://learn.reboot01.com/git/oalmaska)
+- **Ali** (GitHub: [alimjeeed](https://github.com/alimjeeed))
+- **Based** (GitHub: [basem9999](https://github.com/basem9999))
+- **Osama** (GitHub: [oalmaska](https://github.com/oalmaska))
 
 ## Example Output
 
@@ -25,8 +33,8 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/alimjeeed/ascii-art-web.git
-    cd ascii-art-web
+    git clone https://github.com/alimjeeed/ascii-art-web-stylize.git
+    cd ascii-art-web-stylize
     ```
 
 2. **Install Dependencies**:
@@ -41,15 +49,15 @@
     Open your web browser and go to `http://localhost:8000`.
 
 5. **Generate ASCII Art**:
-    Enter your text, choose a banner style, and click "Generate ASCII art" to see the result.
+    Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
 
 ## Implementation Details
 
 ### Algorithm
 
-The ASCII-Art-Web application uses an algorithm to convert text into ASCII art. Here’s a brief overview:
+The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASCII art. Here’s a brief overview:
 
 1. **Input Processing**: Validates the input to ensure it contains only printable ASCII characters.
-2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow). The selected template is loaded.
+2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow, thinkertoy). The selected template is loaded.
 3. **Character Mapping**: Converts each character to its ASCII value and maps it to the corresponding art lines in the selected template.
 4. **Output Generation**: Combines the ASCII art lines to produce the final output, which is displayed in the web interface.
