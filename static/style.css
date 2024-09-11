@@ -7,16 +7,23 @@
 /* Global Styles */
 html, body {
     height: 100%;
-    margin: 0;
+    
     font-family: monaco; 
+    
     background-image: url("minecraft.jpg");
+    
+    margin: 0;
+}
+
+/* Font sise for all elements */
+.buttons label, #submitButton, #output, textarea, textarea::placeholder  {
+    font-size: 1.5vw;
 }
 
 /* Container and Layout */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -24,9 +31,9 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: rgb(40, 40, 40);
     margin-top: 6%;
     margin-bottom: 0;
-    color: rgb(40, 40, 40);
 }
 
 /* Form Styles */
@@ -38,30 +45,25 @@ html, body {
 
 textarea, textarea::placeholder {
     font-family: monaco;
-    font-size: 2.5vw;
 }
 
 /* Input Box Styling */
 #inputString {
     resize: none;
-    width: 100%;
     height: 100px;
-    max-height: 100px;
-    min-height: 100px;
-    max-width: 100%;
-    min-width: 100%;
-    border-radius: 2.5px;
-    padding: 2%;
-    box-sizing: border-box; /* Fix for padding overflow */
-    outline: none; /* Disable blue outline on focus */
+    width: 100%;
     color: #C0C0C0;
     background-color: #2C2C2C;
+    border: 2px solid #000; /* Black border for Minecraft-style */
+    border-radius: 2.5px;
+    box-sizing: border-box; /* Fix for padding overflow */
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5); /* Inset shadow for 3D effect */
     text-shadow: 
         1px 1px 0 #000, /* Black shadow to mimic blocky text */
         1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight blurred shadow for depth */
-    border: 2px solid #000; /* Black border for Minecraft-style */
-    box-shadow: 
-        inset 1px 1px 3px rgba(0, 0, 0, 0.5); /* Inset shadow for 3D effect */
+
+    outline: none; /* Disable blue outline on focus */    
+    padding: 2%;    
 }
 
 /* Button Container */
@@ -84,25 +86,18 @@ textarea, textarea::placeholder {
 
 .buttons label {
     display: inline-block;
-    background-color: #ddd;
-    border-radius: 2.5px;
-    border-bottom: solid 4px #bbb;
-    padding: 10px 30px;
-    width: 8vw;
     vertical-align: bottom;
-    font-size: 2.5vw;
     text-align: center;
+    width: 8vw;
+    background-color: #ddd;
+    border-bottom: solid 4px #bbb;
+    border-radius: 2.5px;
     cursor: pointer;
+    padding: 10px 30px;
     transition: background-color 0.1s ease, color 0.1s ease, border-bottom 0.1s ease;
 }
 
-.buttons label:hover {
-    color: white;
-    background-color: #5B8B32;
-    border-bottom: solid 1px #bbb;
-}
-
-.buttons label.selected {
+.buttons label:hover, .buttons label.selected {
     color: white;
     background-color: #5B8B32;
     border-bottom: solid 1px #bbb;
@@ -110,19 +105,18 @@ textarea, textarea::placeholder {
 
 /* Submit Button */
 #submitButton {
-    background-color: #ddd;
+    vertical-align: bottom;
+    text-align: center;
     width: 100%;
-    padding: 10px 30px;
     font-family: monaco;
-    font-size: 2.5vw;
-    border-radius: 2.5px;
+    background-color: #ddd;
     border-bottom: solid 4px #bbb;
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    vertical-align: bottom;
-    text-align: center;
+    border-radius: 2.5px;
     cursor: pointer;
+    padding: 10px 30px;
     margin-top: 1%;
 }
 
@@ -136,37 +130,36 @@ textarea, textarea::placeholder {
 
 /* Title Styles */
 #title1, #title2 {
+    text-align: center;
     font-size: 140px; /* Adjust font size based on viewport width */
     letter-spacing: 1vw; /* Spacing between letters */
-    margin: 0;
-    text-align: center;
     color: #C0C0C0; /* Gray color */
     -webkit-text-stroke: 2px black; /* Black border around letters */
     text-shadow: 
         3px 3px 0 #000, /* Black shadow for 3D effect */
         3px 3px 5px rgba(0, 0, 0, 0.5); /* Slight blurred shadow for depth */
+    margin: 0;    
 }
 
 /* Output Box Styles */
 #output {
+    text-align: center;
+    max-height: 200px;
     width: 100%;
-    max-height: 400px;
-    padding: 3%;
-    font-size: 2vw;
-    margin-top: 3%;
-    border-radius: 2.5px;
-    border-bottom: solid 4px #bbb;
     color: rgb(100, 100, 100);
     background-color: #ddd;
+    border-bottom: solid 4px #bbb;
+    border-radius: 2.5px;
     overflow: auto; /* Allow scrolling if content overflows */
-    text-align: center;
     box-sizing: border-box; /* Fix for padding overflow */
+    padding: 3%;
+    margin-top: 3%;
 }
 
-/* Code Block Styling */
+/* Code Block Styling (ASCII ART) */
 code {
     white-space: pre;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* Responsive Design */
@@ -174,16 +167,15 @@ code {
     .buttons label {
         width: 9vw;
     }
+    .buttons label, #submitButton, #output, textarea, textarea::placeholder  {
+        font-size: 2vw;
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 850px) {
     .form {
         width: 70%;
-    }
-
-    h1 {
-        font-size: 1.5em;
     }
 
     .titleContainer {
@@ -194,15 +186,11 @@ code {
         font-size: 19vw; /* Adjust font size based on viewport width */
     }
 
-    textarea, textarea::placeholder {
-        font-size: 4vw;
-    }
-
     .buttons label {
         width: 12vw;
     }
 
-    #output {
-        font-size: 3vw;
+    .buttons label, #submitButton, #output, textarea, textarea::placeholder {
+        font-size: 2.8vw;
     }
 }
