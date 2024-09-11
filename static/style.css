@@ -24,14 +24,15 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7%;
+    margin-top: 6%;
     margin-bottom: 0;
     color: rgb(40, 40, 40);
 }
 
 /* Form Styles */
 .form {
-    width: 55%;
+    width: 50%;
+    max-width: 550px;
     padding: 3%;
 }
 
@@ -87,9 +88,9 @@ textarea, textarea::placeholder {
     border-radius: 2.5px;
     border-bottom: solid 4px #bbb;
     padding: 10px 30px;
-    width: 12vw;
+    width: 8vw;
     vertical-align: bottom;
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.1s ease, color 0.1s ease, border-bottom 0.1s ease;
@@ -113,7 +114,7 @@ textarea, textarea::placeholder {
     width: 100%;
     padding: 10px 30px;
     font-family: monaco;
-    font-size: 3vw;
+    font-size: 2.5vw;
     border-radius: 2.5px;
     border-bottom: solid 4px #bbb;
     border-top: 0;
@@ -135,7 +136,7 @@ textarea, textarea::placeholder {
 
 /* Title Styles */
 #title1, #title2 {
-    font-size: 14vw; /* Adjust font size based on viewport width */
+    font-size: 140px; /* Adjust font size based on viewport width */
     letter-spacing: 1vw; /* Spacing between letters */
     margin: 0;
     text-align: center;
@@ -169,6 +170,13 @@ code {
 }
 
 /* Responsive Design */
+@media (max-width: 1300px) {
+    .buttons label {
+        width: 9vw;
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 850px) {
     .form {
         width: 70%;
@@ -183,10 +191,18 @@ code {
     }
 
     #title1, #title2 {
-        font-size: 20vw; /* Adjust font size based on viewport width */
+        font-size: 19vw; /* Adjust font size based on viewport width */
     }
 
     textarea, textarea::placeholder {
         font-size: 4vw;
+    }
+
+    .buttons label {
+        width: 12vw;
+    }
+
+    #output {
+        font-size: 3vw;
     }
 }
