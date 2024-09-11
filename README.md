@@ -61,3 +61,13 @@ The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASC
 2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow, thinkertoy). The selected template is loaded.
 3. **Character Mapping**: Converts each character to its ASCII value and maps it to the corresponding art lines in the selected template.
 4. **Output Generation**: Combines the ASCII art lines to produce the final output, which is displayed in the web interface.
+
+## Font License
+
+The font used in this project is:
+
+- **FontStruction**: Monaco
+- **Designer**: Jamie Place
+- **License**: Creative Commons Attribution Share Alike ([CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/))
+
+You can view and download the font here: [Monaco FontStruction](http://fontstruct.com/fontstructions/show/753435)
