@@ -8,13 +8,7 @@
    - The web interface is revamped with a Minecraft-inspired theme to create a fun and engaging experience for users.
    
 2. **Improved User Interaction**: 
-   - Interactive buttons allow users to easily select between ASCII banner styles like *Standard*, *Shadow*, and *Thinkertoy*.   
-
-## Authors
-
-- **Ali** (GitHub: [alimjeeed](https://github.com/alimjeeed))
-- **Based** (GitHub: [basem9999](https://github.com/basem9999))
-- **Osama** (GitHub: [oalmaska](https://github.com/oalmaska))
+   - Interactive buttons allow users to easily select between ASCII banner styles like *Standard*, *Shadow*, and *Thinkertoy*.
 
 ## Example Output
 
@@ -61,6 +55,12 @@ The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASC
 2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow, thinkertoy). The selected template is loaded.
 3. **Character Mapping**: Converts each character to its ASCII value and maps it to the corresponding art lines in the selected template.
 4. **Output Generation**: Combines the ASCII art lines to produce the final output, which is displayed in the web interface.
+
+## Authors
+
+- **Ali** - [GitHub](https://github.com/alimjeeed)
+- **Basem** - [GitHub](https://github.com/basem9999)
+- **Osama** - [GitHub](https://github.com/oalmaska)
 
 ## Font License
 
