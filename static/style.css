@@ -145,7 +145,7 @@ textarea, textarea::placeholder {
 /* Output Box Styles */
 #output {
     text-align: center;
-    max-height: 200px;
+    max-height: 300px;
     width: 100%;
     color: rgba(0, 0, 0, 0.5);
     background-color: rgba(221, 221, 221, 0.5);
