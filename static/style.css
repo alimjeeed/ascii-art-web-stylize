@@ -5,10 +5,14 @@
 }
 
 /* Global Styles */
+html {
+    background-image: url("minecraft-night.jpg");
+    background-size: cover;
+}
+
 html, body {
-    height: 100%;
+    height: fit-content;
     font-family: monaco; 
-    background-image: url("minecraft.jpg");
     margin: 0;
 }
 
@@ -143,9 +147,8 @@ textarea, textarea::placeholder {
     text-align: center;
     max-height: 200px;
     width: 100%;
-    color: rgb(100, 100, 100);
-    background-color: #ddd;
-    border-bottom: solid 4px #bbb;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(221, 221, 221, 0.5);
     border-radius: 2.5px;
     overflow: auto; /* Allow scrolling if content overflows */
     box-sizing: border-box; /* Fix for padding overflow */
