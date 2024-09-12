@@ -35,7 +35,7 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 
 		if banner != "standard" && banner != "shadow" && banner != "thinkertoy" {
 			// Send a 400 Bad Request response to the client.
-			http.Error(w, "Bad Request: You must select a banner.", http.StatusBadRequest)
+			http.Error(w, "Bad Request: Invalid banner value.", http.StatusBadRequest)
 			return
 		}
 
