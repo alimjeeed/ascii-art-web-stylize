@@ -101,7 +101,7 @@ textarea, textarea::placeholder {
 .buttons label:hover, .buttons label.selected {
     color: white;
     background-color: #5B8B32;
-    border-bottom: solid 1px #bbb;
+    border-bottom: solid 4px #426424;
 }
 
 /* Submit Button */
@@ -125,7 +125,7 @@ textarea, textarea::placeholder {
 #submitButton:hover {
     color: white;
     background-color: #5B8B32;
-    border-bottom: solid 1px #bbb;
+    border-bottom: solid 4px #426424;
     transition: 0.1s;
 }
 
