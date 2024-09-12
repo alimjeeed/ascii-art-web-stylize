@@ -8,6 +8,7 @@
 html {
     background-image: url("minecraft-night.jpg");
     background-size: cover;
+    background-position-x: center;
 }
 
 html, body {
@@ -178,13 +179,24 @@ code {
     .buttons label {
         width: 9vw;
     }
+
     .buttons label, #submitButton, #output, textarea, textarea::placeholder  {
         font-size: 2vw;
     }
 }
 
+@media (max-width: 1100px) {
+    html {
+        background-size: auto;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 850px) {
+    html {
+        background-size: auto;
+    }
+
     .form {
         width: 70%;
     }
