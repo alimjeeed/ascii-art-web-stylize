@@ -1,6 +1,6 @@
 # ascii-art-web-stylize
 
-**ascii-art-web-stylize** is a Go-based web application that transforms text into stylized ASCII art, building on the original **ascii-art-web** project. In this version, we focus on enhancing the user interface to be more appealing, interactive, and user-friendly by adopting a Minecraft-inspired design. Additionally, the web app is fully responsive, ensuring smooth functionality across desktops, iPads, and small mobile devices.
+**ascii-art-web-stylize** is a Go-based web application that transforms text into stylized ASCII art, building on the original **ascii-art** project. In this version, we focus on enhancing the user interface to be more appealing, interactive, and user-friendly by adopting a Minecraft-inspired design. Additionally, the web app is fully responsive, ensuring smooth functionality across desktops, iPads, and small mobile devices.
 
 ## Screenshot
 
