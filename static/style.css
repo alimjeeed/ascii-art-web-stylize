@@ -101,7 +101,7 @@ textarea, textarea::placeholder {
     transition: background-color 0.1s ease, color 0.1s ease, border-bottom 0.1s ease;
 }
 
-.buttons label:hover, .buttons label.selected {
+.buttons label:hover, .buttons input:checked + label {
     color: white;
     background-color: #5B8B32;
     border-bottom: solid 4px #426424;
@@ -249,7 +249,7 @@ code {
             padding: 10px;  
             box-sizing: border-box;  /* Prevent padding from exceeding the width */
         }
-        
+
         #submitButton {
             width: 100%;  
             margin: 20px 0 0 0; 

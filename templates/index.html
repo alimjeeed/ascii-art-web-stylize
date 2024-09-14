@@ -4,43 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII Art Web</title>
     <link rel="stylesheet" href="/static/style.css">
-    
-
-    <script>
-        let lastSelectedId = "standard"; // To store the last clicked button
-
-        // Automatically select the first button on page load
-        window.onload = function() {
-            document.getElementById("standard").checked = true;
-            selectBanner("standard");
-        };
-
-        function selectBanner(selectedId) {
-            // Remove the selected class from all labels
-            const labels = document.querySelectorAll('.buttons label');
-            labels.forEach(label => {
-                label.classList.remove('selected');
-            });
-
-            // Add the selected class to the clicked label
-            const selectedLabel = document.querySelector(`label[for=${selectedId}]`);
-            selectedLabel.classList.add('selected');
-
-            // Update the last selected id
-            lastSelectedId = selectedId;
-        }
-
-        // Add event listeners to all the radio buttons and labels
-        document.addEventListener("DOMContentLoaded", function () {
-            const radios = document.querySelectorAll(".buttons input[type='radio']");
-            radios.forEach(radio => {
-                radio.addEventListener('change', function () {
-                    selectBanner(radio.id);
-                });
-            });
-        });
-    </script>
- 
 </head>
 <body>
 
@@ -48,7 +11,6 @@
     <p id="title1">ASCII ART</p>
     <p id="title2">GENERATOR</p>
 </div>
-
 
 <div class="container">
     <div class="form">
