@@ -63,8 +63,12 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 
 		// Validate banner file existence, then read and split its content into lines.
 		bannerFileName := banner + fileExtension
-		asciiart.ValidateBannerFile(bannerFileName, w, r)
-		asciiArtLines := strings.Split(asciiart.ReadFileContent(bannerFileName), splitter)
+		bannerFileContent, err := asciiart.ReadFileContent(bannerFileName)
+		if err != nil {
+			http.Error(w, "Internal Server Error: " + err.Error(), http.StatusInternalServerError)
+			return
+		} 
+		asciiArtLines := strings.Split(bannerFileContent, splitter)
 
 		// Convert input string to ASCII values and generate/display ASCII art.
 		asciiValues := asciiart.StringToAscii(inputString)
