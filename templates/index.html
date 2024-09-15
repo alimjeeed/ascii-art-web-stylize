@@ -39,7 +39,7 @@
         <div id="output">
             <!-- Conditional block: This section only appears if the .InputString field is set in the template data. -->
             {{if .Output}}
-                <code>{{.Output}}</code>
+                <code><bold>{{.Output}}</bold></code>
             {{else}}
                 <p>Your ASCII art will appear here. Enter some text above, choose a banner and hit "Generate" to see it!</p>
             {{end}}

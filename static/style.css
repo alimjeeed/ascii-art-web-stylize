@@ -149,7 +149,6 @@ textarea, textarea::placeholder {
 /* Output Box Styles */
 #output {
     text-align: center;
-    font-weight: bold;
     max-height: 300px;
     width: 100%;
     color: rgba(0, 0, 0, 0.5);
