@@ -8,6 +8,8 @@ const (
 	asciiCarriageReturn = 13
 )
 
+// GenerateAsciiArt converts a list of ASCII values into an ASCII art representation.
+// It processes each character, handles newlines, and constructs the final output string.
 func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 	outputLines := make([]string, asciiArtHeight)
 	skipNext := false
@@ -22,15 +24,16 @@ func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 			continue
 		}
 
-		// If the current character form a new line, insert a new line.
+		// Check if the current character starts a new line.
 		if i < len(asciiValues)-1 && asciiValues[i] == asciiNewline || asciiValues[i] == asciiCarriageReturn {
-			// Add the ASCII art created so far, followed by a newline character.
+			
+			// Append the ASCII art created so far and add a newline.
 			output += GetAsciiArt(outputLines) + "\n"
 
-			// Reset the outputLines slice for the next line of ASCII art.
+			// Reset the outputLines slice to start a new line of ASCII art.
 			outputLines = make([]string, asciiArtHeight)
 
-			// Skip "\n"
+			// Skip the newline character in the input.
 			skipNext = true
 			continue
 		}
@@ -43,18 +46,18 @@ func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 			outputLines[j] += asciiArtLines[startIndex+j]
 		}
 
-		// Check if the last character in the input string form a newline.
+		// Check if the last character in the input string is a newline.
 		if len(asciiValues) > 1 && asciiValues[len(asciiValues)-1] == asciiNewline || asciiValues[len(asciiValues)-1] == asciiCarriageReturn {
 			lastCharIsNewLine = true
 		}
 
-		// If this is the last character, add the remaining ASCII art.
+		// If this is the last character, append the remaining ASCII art.
 		if i == len(asciiValues)-1 {
 			output += GetAsciiArt(outputLines)
 		}
 	}
 
-	// Add the new line at the end if required.
+	// Add the newline at the end if required.
 	if lastCharIsNewLine {
 		output += "\n"
 	}
