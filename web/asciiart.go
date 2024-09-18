@@ -59,7 +59,7 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 
 		// Validate banner file existence, then read and split its content into lines.
 		bannerFileName := banner + fileExtension
-		bannerFileContent, err := asciiart.ReadFileContent(bannerFileName)
+		bannerFileContent, err := asciiart.ReadBannerFile(bannerFileName)
 		if err != nil {
 			http.Error(w, "Internal Server Error: "+err.Error(), http.StatusInternalServerError)
 			return
