@@ -6,9 +6,9 @@ import (
 	"text/template"
 )
 
-// Checks if the "templates/index.html" file exists.
+const templatePath = "templates/index.html"
+
 func CheckTemplateExists() bool {
-	const templatePath = "templates/index.html"
 	_, err := os.Stat(templatePath)
 	return err == nil
 }
@@ -16,9 +16,8 @@ func CheckTemplateExists() bool {
 var tmpl *template.Template
 
 func init() {
-	// Check if the template exists before parsing it.
 	if CheckTemplateExists() {
-		tmpl = template.Must(template.ParseFiles("templates/index.html"))
+		tmpl = template.Must(template.ParseFiles(templatePath))
 	}
 }
 
@@ -30,7 +29,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Send a 500 Internal Server Error response to the client if the template does not exist.
 	if tmpl == nil {
 		http.Error(w, "Internal Server Error: Template not found.", http.StatusInternalServerError)
 		return

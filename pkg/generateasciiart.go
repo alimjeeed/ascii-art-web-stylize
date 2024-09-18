@@ -26,11 +26,9 @@ func GenerateAsciiArt(asciiValues []int, asciiArtLines []string) string {
 
 		// Check if the current character starts a new line.
 		if i < len(asciiValues)-1 && asciiValues[i] == asciiNewline || asciiValues[i] == asciiCarriageReturn {
-			
+
 			// Append the ASCII art created so far and add a newline.
 			output += GetAsciiArt(outputLines) + "\n"
-
-			// Reset the outputLines slice to start a new line of ASCII art.
 			outputLines = make([]string, asciiArtHeight)
 
 			// Skip the newline character in the input.

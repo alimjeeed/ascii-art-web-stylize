@@ -1,14 +1,14 @@
 /* Font */
 @font-face {
-    font-family: 'monaco'; /* Name your font family */
-    src: url('monaco.ttf'); /* Locate the .ttf file within your directory */
+    font-family: 'monaco'; 
+    src: url('monaco.ttf'); 
 }
 
 /* Global Styles */
 html {
     background-image: url("minecraft-night.webp");
     background-size: cover;  /* Ensures the background covers the entire screen */
-    background-repeat: no-repeat;  /* Prevents the background from repeating */
+    background-repeat: no-repeat;  
     background-position: center center;  /* Centers the background on both axes */
     background-attachment: fixed;  /* Keeps the background fixed during scrolling */
 }
