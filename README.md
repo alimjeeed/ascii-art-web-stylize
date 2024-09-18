@@ -41,6 +41,37 @@
 5. **Generate ASCII Art**:
    Input your text, select a style (Standard, Shadow, Thinkertoy), and click "Generate" to display the ASCII art.
 
+## Project Structure
+
+```plaintext
+.
+├── README.md
+├── banners
+│   ├── shadow.txt
+│   ├── standard.txt
+│   └── thinkertoy.txt
+├── go.mod
+├── internal
+│   ├── generateasciiart.go
+│   ├── getasciiart.go
+│   ├── isstringsliceempty.go
+│   ├── readfilecontent.go
+│   └── stringtoascii.go
+├── main.go
+├── screenshot
+│   └── ascii-art-web-stylize-screenshot.jpg
+├── static
+│   ├── minecraft-day.webp
+│   ├── minecraft-night.webp
+│   ├── monaco.ttf
+│   └── style.css
+├── templates
+│   └── index.html
+└── web
+    ├── asciiart.go
+    └── home.go
+```
+   
 ## How It Works (Algorithm)
 
 The application converts text into ASCII art using the following steps:
