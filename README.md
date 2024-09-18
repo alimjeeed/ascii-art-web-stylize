@@ -1,21 +1,10 @@
 # ASCII Art Web Stylize
 
-**ASCII Art Web Stylize** is a Go-based web application that transforms text into stylized ASCII art, building on the original **ASCII Art** project. In this version, we focus on enhancing the user interface to be more visually appealing, interactive, and user-friendly by adopting a pixelated, blocky design inspired by the popular video game Minecraft. Additionally, the web app is fully responsive, ensuring smooth functionality across desktops, tablets, and small mobile devices.
+**ASCII Art Web Stylize** is a Go-powered web app that turns your text into stunning ASCII art with a fun, Minecraft-inspired design. Its responsive interface ensures a smooth, engaging experience on any device, from desktop to mobile, making your words come alive in creative, pixelated style.
 
 ## Screenshot
 
 ![Screenshot of ascii-art-web-stylize](https://github.com/alimjeeed/ascii-art-web-stylize/blob/main/screenshot/ascii-art-web-stylize-screenshot.jpg)
-
-## Key Enhancements
-
-1. **Appealing and Intuitive Design**: 
-   - The web interface is revamped with a Minecraft-inspired theme to create a fun and engaging experience for users.
-   
-2. **Improved User Interaction**: 
-   - Interactive buttons allow users to easily select between ASCII banner styles like *Standard*, *Shadow*, and *Thinkertoy*.
-
-3. **Responsive Design**:
-   - The web interface is fully optimized for different screen sizes.
 
 ## Example Output
 
@@ -30,7 +19,7 @@
                                 
 ```
 
-## Usage
+## How to Use
 
 1. **Clone the Repository**:
     ```bash
@@ -38,30 +27,28 @@
     cd ascii-art-web-stylize
     ```
 
-2. **Install Dependencies**:
-    Ensure you have Go installed on your system. You can download it from the official [Go website](https://golang.org/).
+2. **Install Go**:  
+   Make sure Go is installed. You can download it from the official [Go website](https://golang.org/).
 
-3. **Run the Server**:
+3. **Run the Application**:
     ```bash
     go run main.go
     ```
 
-4. **Access the Web Interface**:
-    Open your web browser and go to `http://localhost:8000`.
+4. **Access the Application**:
+   Open your web browser and navigate to `http://localhost:8000` to access the web interface.
 
 5. **Generate ASCII Art**:
-    Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
+   Input your text, select a style (Standard, Shadow, Thinkertoy), and click "Generate" to display the ASCII art.
 
-## Implementation Details
+## How It Works (Algorithm)
 
-### Algorithm
+The application converts text into ASCII art using the following steps:
 
-The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASCII art. Here’s a brief overview:
-
-1. **Input Processing**: Validates the input to ensure it contains only printable ASCII characters.
-2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow, thinkertoy). The selected template is loaded.
-3. **Character Mapping**: Converts each character to its ASCII value and maps it to the corresponding art lines in the selected template.
-4. **Output Generation**: Combines the ASCII art lines to produce the final output, which is displayed in the web interface.
+1. **Input Validation**: The input is checked to ensure it contains only valid ASCII characters.
+2. **Banner Style Selection**: Users can choose between different ASCII art styles (Standard, Shadow, Thinkertoy).
+3. **ASCII Mapping**: Each character in the input text is mapped to the corresponding ASCII representation from the selected template.
+4. **Output Generation**: The ASCII art is constructed and displayed on the web page.
 
 ## Authors
 
@@ -69,12 +56,8 @@ The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASC
 - **Basem** - [GitHub](https://github.com/basem9999)
 - **Osama** - [GitHub](https://github.com/oalmaska)
 
-## Font License
+## License Information
 
-The font used in this project is:
+The project uses the **Monaco** font, designed by Jamie Place, licensed under the Creative Commons Attribution Share Alike ([CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)) license.
 
-- **FontStruction**: Monaco
-- **Designer**: Jamie Place
-- **License**: Creative Commons Attribution Share Alike ([CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/))
-
-You can view and download the font here: [Monaco FontStruction](http://fontstruct.com/fontstructions/show/753435)
+**Font Source**: [Monaco FontStruction](http://fontstruct.com/fontstructions/show/753435)
