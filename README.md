@@ -55,7 +55,7 @@
 │   ├── generateasciiart.go
 │   ├── getasciiart.go
 │   ├── isstringsliceempty.go
-│   ├── readfilecontent.go
+│   ├── readbannerfile.go
 │   └── stringtoascii.go
 ├── main.go
 ├── screenshot
