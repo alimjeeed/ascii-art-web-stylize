@@ -1,7 +1,7 @@
 package web
 
 import (
-	asciiart "asciiart/pkg"
+	asciiart "asciiart/internal"
 	"net/http"
 	"strings"
 )
@@ -22,7 +22,7 @@ type PageData struct {
 
 // Handles HTTP POST requests to the "/ascii-art" URL.
 func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
-	
+
 	if tmpl == nil {
 		http.Error(w, "Internal Server Error: Template not found.", http.StatusInternalServerError)
 		return
@@ -61,9 +61,9 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 		bannerFileName := banner + fileExtension
 		bannerFileContent, err := asciiart.ReadFileContent(bannerFileName)
 		if err != nil {
-			http.Error(w, "Internal Server Error: " + err.Error(), http.StatusInternalServerError)
+			http.Error(w, "Internal Server Error: "+err.Error(), http.StatusInternalServerError)
 			return
-		} 
+		}
 		asciiArtLines := strings.Split(bannerFileContent, splitter)
 
 		asciiValues := asciiart.StringToAscii(inputString)
