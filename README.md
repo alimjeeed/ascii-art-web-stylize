@@ -81,6 +81,10 @@ The application converts text into ASCII art using the following steps:
 3. **ASCII Mapping**: Each character in the input text is mapped to the corresponding ASCII representation from the selected template.
 4. **Output Generation**: The ASCII art is constructed and displayed on the web page.
 
+## Dockerized Version
+
+For a Dockerized version of this project, check out the repository here: [ASCII Art Web Dockerize](https://github.com/alimjeeed/ascii-art-web-dockerize.git).
+
 ## Authors
 
 - **Ali** - [GitHub](https://github.com/alimjeeed)
